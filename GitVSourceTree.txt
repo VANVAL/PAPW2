@@ -1,0 +1,9 @@
+DIFERENCIA ENTRE GIT Y SOURCETREE
+
+A pesar de que ambos sirven para crear repositorios y manejarlos. SourceTree presenta una interfaz de usuario que
+permite visualizar nuestro proyecto como si fuera un árbol, que va creciendo conforme le añadimos más "ramas" al proyecto.
+Git por su parte  carece de aspecto gráfico  y se puede manejar directo en la consola. Además de que es un poco más
+rápido que SourceTree.
+
+Por el momento utilicé Git, pues se me quedó lo que realicé de la tarea en clase y lo apliqué de nuevo en mi 
+computadora. Pero pienso descargar SourceTree también. 
