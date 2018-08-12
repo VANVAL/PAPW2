@@ -1,3 +1,3 @@
 Para crear un repositorio con una rama adicional en git se usa el comando de git checkout -b <nombreRama>
-Este comando crea una nueva rama dentro de nuestro repositorio, on en dado caso de que esa rama ya existe,
+Este comando crea una nueva rama dentro de nuestro repositorio, o en  dado caso de que esa rama ya existe,
 nos posiciona en la misma.
