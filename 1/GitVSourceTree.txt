@@ -6,4 +6,4 @@ Git por su parte  carece de aspecto gráfico  y se puede manejar directo en la co
 rápido que SourceTree.
 
 Por el momento utilicé Git, pues se me quedó lo que realicé de la tarea en clase y lo apliqué de nuevo en mi 
-computadora. Pero pienso descargar SourceTree también. 
+computadora. Pero pienso descargar SourceTree también.  :D
