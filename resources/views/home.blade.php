@@ -20,10 +20,21 @@
         </div>
     </div>
     
+        <!--Lo que fredo hizo para mostrar la lista de correos -->
+       
         <h3>Todos los usuarios registrados:</h3>
-        
+        <ul>
+            @foreach ($users as $u)
+
+            <li>{{ $u->email }}</li>
+            @endforeach
 
 
+        </ul>
+       
+
+
+        <!-- Hasta aqui -->
        
 </div>
 @endsection
