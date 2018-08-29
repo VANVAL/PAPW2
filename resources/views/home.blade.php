@@ -21,12 +21,12 @@
     </div>
     
         <!--Lo que fredo hizo para mostrar la lista de correos -->
-        $users;
+        
         @isset($users)
         <h3>Todos los usuarios registrados:</h3>
         <ul>
             @foreach ($users as $u)
-            <li>{{ $u-> email }}</li>
+            <li>{{ $u->email }}</li>
             @endforeach
 
 
