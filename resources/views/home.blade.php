@@ -19,20 +19,11 @@
             </div>
         </div>
     </div>
-    <!--Lo que fredo hizo para mostrar la lista de correos -->
-        @isset($users)
+    
         <h3>Todos los usuarios registrados:</h3>
-        <ul>
-            @foreach ($users as $u)
-
-            <li>{{ $u->email }}</li>
-            @endforeach
+        
 
 
-        </ul>
-        @endisset
-
-
-        <!-- Hasta aqui -->
+       
 </div>
 @endsection
