@@ -22,3 +22,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+use App\User;
+Route::get('home2', function(){
+	return view(
+		'layout.home', ['users' => User::all()]
+	);
+});
