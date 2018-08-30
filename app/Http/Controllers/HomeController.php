@@ -26,6 +26,9 @@ class HomeController extends Controller
     {
        /* $users=User::all();
         return view::make('home')->with('users', $users);*/
-        return view('home');
+        //return view('home');
+
+        $users=User::all()->toArray();
+        return view('home', compact('users'));
     }
 }
