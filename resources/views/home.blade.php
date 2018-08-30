@@ -1,4 +1,6 @@
+@extends('master')
 @extends('layouts.app')
+
 
 @section('content')
 <div class="container">
@@ -21,17 +23,17 @@
     </div>
     
         <!--Lo que fredo hizo para mostrar la lista de correos -->
-        <!--
+        
         @isset($users)
         <h3>Todos los usuarios registrados:</h3>
         <ul>
             @foreach ($users as $u)
-            <li>{{ $u->email }}</li>
+            <li>{{$u['email']}}</li>
             @endforeach
 
 
         </ul>
-        @endisset-->
+        @endisset
 
 
         <!-- Hasta aqui -->
