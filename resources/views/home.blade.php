@@ -21,6 +21,14 @@
             </div>
         </div>
     </div>
+
+    <ul>
+            @foreach ($users as $u)
+            <li>{{ $u->email }}</li>
+            @endforeach
+
+
+        </ul>
     
         <!--Lo que fredo hizo para mostrar la lista de correos -->
         

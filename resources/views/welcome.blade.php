@@ -8,7 +8,8 @@
    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
     <!-- <script src="index.js"></script>-->
-
+   
+    
 </head>
 <body>
    <!--DIV QUE CONTIENE EL LOGO--> 
@@ -30,17 +31,17 @@
     <!--DIV QUE CONTIENE LA SIDEBAR--> 
     <div id="sideBarDIV">
         <div id="formDIV"> 
-            <form>
-               <h6>Become a Creator!</h6>
-                <input class="INPtext" type="text" placeholder="username"><br>
-               
-                <input class="INPtext" type="text" placeholder="password"><br>
-
-                <input id="btnSubmit" type="submit" value="JOIN!">
-            </form>
+            <h6>Become a Creator!</h6>
+         
+            @include('auth.login')
+            @include('auth.register')
+           
+            @yield('content')
+           
         </div>
         <p>Already a creator?</p>
         <a href="">Log in</a>
     </div>
+   
 </body>
 </html>
