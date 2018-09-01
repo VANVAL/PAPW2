@@ -23,9 +23,10 @@
     </div>
 
     <ul>
-            @foreach ($users as $u)
+        <!--FREDO-->
+            <!--@foreach ($users as $u)
             <li>{{ $u->email }}</li>
-            @endforeach
+            @endforeach-->
 
 
         </ul>
