@@ -32,16 +32,5 @@ class HomeController extends Controller
 
     public function index()
     {
-<<<<<<< HEAD
-       /* $users=User::all();
-        return view::make('home')->with('users', $users);*/
-        //return view('home');
-
-        $users=User::all()->toArray();
-        return view('home', compact('users'));
-=======
-        return view('home');
->>>>>>> Se añadieron los archivos modificados por el profe uwu
+        
     }
-}
-//siraj raval  weas de progra en youtube
