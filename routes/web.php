@@ -15,12 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
- Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-use App\User;
-Route::get('/home', function () {     
-    return view('home', ['users' => User::all()]
-); 
-}); 
+Route::get('/main', function () {
+    return view('layouts.main');
+});
+
+
+use App\User; 
+Route::get('/home', function () {   return view(     'home',    
+       ['users' => User::all()] // Nombre y Parámetro enviado  
+     ); });
+

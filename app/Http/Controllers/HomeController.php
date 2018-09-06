@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 
 class HomeController extends Controller
 {
@@ -22,15 +21,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    /*public function index()
-    {
-       // $users=User::all();
-        //return view::make('home')->with('users', $users);
-       // return view('home');
-    }*/
-
     public function index()
     {
-       // return view('home');
+        return view('home');
     }
+}

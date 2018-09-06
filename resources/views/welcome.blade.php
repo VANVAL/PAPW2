@@ -1,47 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CREATOR</title>
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
-    <!-- <script src="index.js"></script>-->
-   
-    
-</head>
-<body>
-   <!--DIV QUE CONTIENE EL LOGO--> 
-   <div id="logoDIV">
-        <div id="logo">
-            <img src="./img/Logo_Template.png" alt="Creator">
-        </div>
-        <div class="slogan">
-            <div id="parrafo1">
-               <h3>From your mind</h3>
+        <title>Creator</title>
+
+        <!-- Fonts -->
+        
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="./css/index.css" rel="stylesheet" type="text/css">
+
+        
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('register') }}">Register</a>
+                    @endauth
+                </div>
+            @endif
+
+            <div class="content">
+                @include('layouts.registro')
+                @include('layouts.sidebar')
             </div>
-            <div id="parrafo2">
-                <h3>To the client...</h3>
-            </div>
         </div>
-    </div>
-
-
-    <!--DIV QUE CONTIENE LA SIDEBAR--> 
-    <div id="sideBarDIV">
-        <div id="formDIV"> 
-            <h6>Become a Creator!</h6>
-         
-            @include('auth.login')
-            @include('auth.register')
-           
-            @yield('content')
-           
-        </div>
-        <p>Already a creator?</p>
-        <a href="">Log in</a>
-    </div>
-   
-</body>
+    </body>
 </html>

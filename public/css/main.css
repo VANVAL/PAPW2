@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+}
+
+#mainBody{
+    height: auto;
+    width: 95vw;
+    display: block;
+    position: absolute;
+    
+}
+
+
+div.filaBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background-color: #f7f7f7;
+    
+}
+
+@media screen and (min-width: 500px) {
+    div.filabody {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    div.filaBody {
+      grid-template-columns: 1fr 1fr ;
+    }
+  }
+
+
+div.bodyElement{
+    height: auto;
+    width: 260px;
+    display: inline-block;
+    position: relative;
+    padding: 10px 25px 10px 25px;
+    align-content: center;
+    
+}
+
+div.bodyElement img{
+    height: auto;
+    width: 260px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
