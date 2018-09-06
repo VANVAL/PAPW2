@@ -1,6 +1,4 @@
-
 @extends('layouts.app')
-
 
 @section('content')
 <div class="container">
@@ -17,6 +15,15 @@
                     @endif
 
                     You are logged in!
+                    <br/>
+                    @isset($users)
+                      <h3>Todos los usuarios registrados:</h3>
+                            <ul>
+                                @foreach ($users as $u)
+                                <li>{{ $u->email }}</li>
+                                @endforeach
+                            </ul>
+                    @endisset
                 </div>
             </div>
         </div>
