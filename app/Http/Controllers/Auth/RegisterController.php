@@ -3,11 +3,19 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+<<<<<<< HEAD
+=======
+use App\Role; 
+>>>>>>> 1fcba7726d7bf3c66bf90416c2f335c6932542c5
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1fcba7726d7bf3c66bf90416c2f335c6932542c5
 class RegisterController extends Controller
 {
     /*
@@ -63,10 +71,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+<<<<<<< HEAD
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+=======
+        
+         $user = User::create([
+              'name'     => $data['name'],     
+              'email'    => $data['email'],     
+              'password' => Hash::make($data['password']),   
+          ]);   
+         $user->roles()     
+         ->attach(Role::where('name', 'cliente')->first());   
+
+         return $user;
+
+
+
+      
+>>>>>>> 1fcba7726d7bf3c66bf90416c2f335c6932542c5
     }
 }
