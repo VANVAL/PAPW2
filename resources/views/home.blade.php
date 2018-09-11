@@ -38,22 +38,6 @@
 
 
         </ul>
-    
-        <!--Lo que fredo hizo para mostrar la lista de correos -->
-        
-       <!-- @isset($users)-->
-       
-       <!-- <ul>
-            @foreach ($users as $u)
-            <li>{{$u->email}}</li>
-            @endforeach
 
-
-        </ul>-->
-        <!--@endisset-->
-
-
-        <!-- Hasta aqui -->
-       
 </div>
 @endsection

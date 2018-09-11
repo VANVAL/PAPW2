@@ -14,7 +14,7 @@
    <!--DIV QUE CONTIENE EL LOGO--> 
    <div id="logoDIV">
         <div id="logo">
-            <img src="./img/Logo_Template.png" alt="Creator">
+            <img src="./img/Creator_Logo_T.png" alt="Creator">
         </div>
         <div class="slogan">
             <div id="parrafo1">

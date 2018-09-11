@@ -10,7 +10,8 @@
         <!-- Fonts -->
         
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="./css/index.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="./css/index.css">
+        <!--<script type="text/javascript" src="./js/script.js"></script>-->
 
         
     </head>
