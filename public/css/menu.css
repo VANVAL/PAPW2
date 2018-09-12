@@ -1,0 +1,37 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('fonts/CANDARA.TTF') format('truetype');
+}
+
+#container{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    display: block;
+}
+
+.menuElement{
+    width: 100px;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menuItem h4, #LogoContainer h4{
+    font-weight: bold;
+    color: white;
+}
+
+.menuItem h4:hover, #LogoContainer h4{
+    color: turquoise;
+}
+
+#LogoContainer img{
+    height: 100%;
+    width: auto;
+}
+

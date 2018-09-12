@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    background-color:#272727;
 }
 
 #mainBody{
@@ -16,7 +17,7 @@ div.filaBody{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 1px;
     grid-row-gap: 1px;
-    background-color: #f7f7f7;
+   /* background-color: #f7f7f7;*/
     
 }
 

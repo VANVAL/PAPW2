@@ -28,15 +28,5 @@
             </div>
         </div>
     </div>
-
-    <ul>
-        <!--FREDO-->
-         <h3>Todos los usuarios registrados:</h3>
-            @foreach ($users as $u)
-            <li>{{ $u->email }}</li>
-            @endforeach
-
-
-        </ul>
 </div>
 @endsection

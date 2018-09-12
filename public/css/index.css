@@ -10,15 +10,15 @@ body{
     margin: 0;
     padding: 0;
     background-image: url("../img/diagonal-noise.png");
-
+    overflow: hidden;
 
 }
 
 div#logoDIV{
     display: inline-block;
-    width: 75%;
+    width: 80%;
     height: 100vh;
-    position: absolute;
+    position: relative;
     
     }
 
@@ -28,45 +28,46 @@ div#logoDIV logo{
 }
 
 div#logoDIV img{
-    height: 100vh;
-    width: auto;
-    transform: translate(-45%,-50%);
-    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%);
+    position: relative;
     top: 50%;
     left: 50%;
 }
 
 .slogan{
-    width: auto;
-    height:100vh;
-    position: relative;
-    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: inline-block;
+    top: 0%;
+    left: 0%;
 }
 
 
 .slogan #parrafo1{
-	position: absolute;
-	text-align: center;
-	top: 0%;
-    left : 20%;
-	font-style: italic;
-	font-size: 30px; 
-	color:  #158f89;
-	text-shadow: 2px 2px 4px #7bc74d;
+    position: relative;
+    top: 0%;
+    left: 30px;
+    font-style: italic;
+    font-size: 30px;
+    color: #158f89;
+    text-shadow: 2px 2px 4px #7bc74d;
 }
 
 
 .slogan #parrafo2{
-	position: absolute;
-	text-align: center;
-    bottom: 10%;
-    right : 0%;
+    position: absolute;
+    text-align: center;
+    bottom: 50%;
+    right: 50px;
     font-style: italic;
-	font-size: 30px; 
-	color:  #158f89;
-	text-shadow: 2px 2px 4px #7bc74d;
-
+    font-size: 30px;
+    color: #158f89;
+    text-shadow: 2px 2px 4px #7bc74d;
 }
+
 
 
 div#sideBarDIV{
@@ -95,20 +96,24 @@ div #formDIV{
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
-    transform: translate(75%,50%);
+    transform: translate(50%,50%);
+    top: 50%;
+    left: 50%;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #9444fb;;
+    background-color: #9444fb;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
 }
 
-#btnSubmit:hover {background-color: #eeeeee;
-    color:#22145f;}
+#btnSubmit:hover {
+    background-color: orange;
+    color:#22145f;
+}
     
 
 #btnSubmit:active {
@@ -116,7 +121,70 @@ div #formDIV{
       box-shadow: 0 5px #666;
       transform: translateY(4px);
 }
-    
+
+div.form-grouprow{
+    position: relative;
+    display: block;
+    left: 14%;
+
+}
+
+div.form-grouprow div input{
+    border-radius: 10px;
+    width: 200px;
+    height: 22px;
+    margin-bottom: 15px;
+    padding: 1px;
+}
+
+
+
+dib button #btn-primary{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    transform: translate(50%,50%);
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #9444fb;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+div button  #btn{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    transform: translate(50%,50%);
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #9444fb;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+div.card-header{
+    margin-bottom: 10px;
+    margin-top: 30px;
+    position: relative;
+    display: block;
+    left: 15%;
+    color: blueviolet;
+}
+
+
 form .INPtext{
     position: relative;
     width: 250px;

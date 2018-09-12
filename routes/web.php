@@ -20,9 +20,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/main', function () {
+//No borrar
+ Route::get('/main', function () {
     return view('layouts.main');
-});
+}); 
 
 
 use App\User; 

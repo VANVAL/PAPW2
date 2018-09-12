@@ -11,6 +11,7 @@
 <body>
     <!-- DIV QUE CONTIENE AL CONTENIDO :V-->
     <div id="mainBody">
+    @include('layouts.menu')
         <div class="filaBody">
             <div class="bodyElement">
                 <img src="./img/v_hart.png" alt="artwork">
@@ -36,8 +37,24 @@
             <div class="bodyElement">
                 <img src="./img/JustMonika.png" alt="artwork">
             </div> <!--Cierra un elemento -->
+            <div class="bodyElement">
+                <img src="./img/JustMonika.png" alt="artwork">
+            </div> <!--Cierra un elemento -->
+            <div class="bodyElement">
+                <img src="./img/JustMonika.png" alt="artwork">
+            </div> <!--Cierra un elemento -->
+            <div class="bodyElement">
+                <img src="./img/JustMonika.png" alt="artwork">
+            </div> <!--Cierra un elemento -->
+            <div class="bodyElement">
+                <img src="./img/JustMonika.png" alt="artwork">
+            </div> <!--Cierra un elemento -->
+            
         </div><!--Cierra una fila -->   
-    </div> <!--Cierra MAIN BODY-->
 
+        
+    </div> <!--Cierra MAIN BODY-->
+    @include('layouts.navBar')
+    
 </body>
 </html>
