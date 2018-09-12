@@ -1,0 +1,225 @@
+
+@font-face {
+                font-family: myFirstFont;
+                src: url('fonts/CANDARA.TTF') format('truetype');
+           }
+
+body {
+        margin: 0;
+        padding: 0;
+        font-family: myFirstFont;
+         background-image: url("../img/diagonal-noise.png");
+     }
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+.sidebar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 15%;
+            /*min-width: 200px;*/
+            height: 100vh;
+            padding-top: 10px;
+            background: linear-gradient(360deg, turquoise, lightgreen);
+            z-index: 1;
+        }
+
+
+
+.sidebar  img#logo{
+                    position: relative;
+                    min-width: 130px;
+                    top: 0;
+                    left: 0;
+                    height: 10%;
+                    margin: 0 auto;
+                    display: block;
+                    padding-bottom: 5px;
+                  }
+
+#fotoPerfil {
+              border-radius: 100px;
+              height: 150px;
+              width: 150px;
+              margin: 0 auto;
+              display: block;
+          }
+
+.searchBar {
+              display: block;
+              margin: 0px auto;
+              width: 145px;
+              margin-top: 25px;
+         }
+
+.sidebar .opcion {
+                    padding-left: 30px;
+                 }
+
+
+.sidebar .opcion .texto{
+                            margin-bottom: 0px;
+                            margin-top: 12px;
+                       }
+
+.sidebar .menu {
+                   display: block;
+                   margin: 0 auto;
+                   width: 80%;
+                   margin-top: 5px;
+              }
+
+
+.imageList{
+                top: 0%;
+                left: 0%;
+                width: 80%;
+                height: auto;
+                display: block;
+                position: absolute;
+                transform: translate(50%,0%);
+          }
+
+#tituloReportes{
+                        top: 0;
+                    left: 0;
+                    width: auto;
+                    height: auto;
+                    display: block;
+                    position: absolute;
+                    transform: translate(-19vw,-25%);
+                }
+
+#fechaReport{
+                top: 0;
+                left: 0;
+                display: block;
+                position: absolute;
+                transform: translate(-20vw,13vh);
+            }
+
+
+
+.imageList .report{
+                        top: 0;
+                        left: 0;
+                        width: 85%;
+                        height: auto;
+                        display: inline-block;
+                        position: relative;
+                        margin-bottom: 80px;
+                        padding: 0;
+                        transform: translateY(-5vh);
+                   }
+
+
+.report .reportedImage{
+                        top: 0;
+                        left: 0;
+                        max-width: 15%;
+                        height: auto;
+                        display: block;
+                        position: absolute;
+                        transform: translate(-20vw,20vh);
+                      }
+
+.textoReporte{
+                top: 0;
+                left: 0;
+                display: block;
+                position: relative;
+                margin-bottom: 0px;
+                margin-top: 12px;
+                transform: translate(0%,20vh);
+            }
+
+div .avatarUsuario2{
+                      top: 0;
+                      left: 0;
+                      width: 35px;
+                      height: 35px;
+                      border-radius: 100px;
+                      position: relative;
+                      display: block;
+                     transform: translate(-55px);
+                   }
+
+.razonReporte{
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 37px;
+                display: block;
+                position: relative;
+                transform: translateY(25vh);
+                margin-bottom: 0px;
+                padding: 0;
+                border: 0;
+            }
+
+.razonReporte #usuarioReporta{
+
+                                top: 0;
+                                left: 0;
+                                position: relative;
+                                display: inline-block;
+                                transform: translateY(-7vh);
+                                padding: 4px;
+                                width: auto;
+                                height: auto;
+                                margin-top: 16px;
+                                margin-bottom: 0px;
+                            }
+
+.botonesReporte{
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                    height: auto;
+                    display: block;
+                    position: relative;
+                    transform: translate(37vw,6vh);
+                }
+
+#send{
+        margin-right: 8px;
+        transform: translate(-100px);
+    }
+
+#send, #cancel{
+                top: 0;
+                left: 0;
+                width: 7%;
+                height: auto;
+                display: inline-block;
+                position: absolute;
+            }
+
+hr{
+    top: 0;
+    left: 0;
+    position: relative;
+    display: block;
+    transform: translate(-28%,5vh);
+  }
+
+  .negritas{
+    font-weight: bold;
+  }
+
+  #datosUsuario{
+position: absolute;
+    left: -20%;
+  }
+
+  #cerebrito{
+    
+    position: absolute;
+    left: 25%;
+    width: 35%;
+
+
+  }
