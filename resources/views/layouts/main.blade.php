@@ -10,8 +10,9 @@
 </head>
 <body>
     <!-- DIV QUE CONTIENE AL CONTENIDO :V-->
-    <div id="mainBody">
     @include('layouts.menu')
+    <div id="mainBody">
+    
         <div class="filaBody">
             <div class="bodyElement">
                 <img src="./img/v_hart.png" alt="artwork">
