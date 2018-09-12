@@ -26,6 +26,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 }); 
 
 
+Route::get('/content', function () {
+    return view('layouts.content');
+});
+
+
+Route::get('/profile', function () {
+    return view('layouts.Profile');
+});
+
+Route::get('/configurations', function () {
+    return view('layouts.configurations');
+});
+
+
+
 use App\User; 
 Route::get('/home', function () {   return view(     'home',    
        ['users' => User::all()] // Nombre y Parámetro enviado  
