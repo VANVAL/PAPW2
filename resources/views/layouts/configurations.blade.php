@@ -45,7 +45,7 @@
   <input type="radio" name="gender" value="other"> Other
   <br>
   <br>
-  <label class="negritas">DATE OF BIRHT</label>
+  <label class="negritas">DATE OF BIRTH</label>
   <br>
    <input type="date" name="bday">
    <br>
@@ -61,7 +61,7 @@
   <input type="checkbox" name="tipo6" value="6"> Shipping <br>
   <br>
   <br>
-  <label class="negritas">ABOUT ME/INFORMATION</label><br>
+  <label class="negritas">ABOUT ME</label><br>
   ​<textarea id="txtArea" rows="10" cols="70"></textarea>
   <br>
   <br>
