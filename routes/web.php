@@ -41,10 +41,11 @@ Route::get('/configurations', function () {
 
 
 
-use App\User; 
+
+/*use App\User; 
 Route::get('/home', function () {   return view(     'home',    
        ['users' => User::all()] // Nombre y Parámetro enviado  
-     ); });
+     ); });*/
 
 
 
