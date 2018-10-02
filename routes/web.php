@@ -46,3 +46,7 @@ Route::get('/home', function () {   return view(     'home',
        ['users' => User::all()] // Nombre y Parámetro enviado  
      ); });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
