@@ -17,15 +17,21 @@ class Contenido extends Model
 
 
     //Con Usuario
-    public function users(){ 
-      //Sube
+
+    public function subir(){
         return $this->belongsToMany('User', 'user_sube_contenido', 'ContSubido_id', 'UserSube_id');
-    //Like
-         return $this->belongsToMany('User', 'user_likes_contenido', 'ContLike_id', 'UserLike_id');
-    //Comenta
-         return $this->belongsToMany('User', 'user_comenta_contenido', 'ContComenta_id', 'UserComenta_id');
-    //Compra    
-          return $this->belongsToMany('User', 'user_compra_contenido', 'ContCompra_id', 'UserCompra_id');
+    }
+
+    public function likes(){
+        return $this->belongsToMany('User', 'user_likes_contenido', 'ContLike_id', 'UserLike_id');
+    }
+
+    public function comentar(){
+        return $this->belongsToMany('User', 'user_comenta_contenido', 'ContComenta_id', 'UserComenta_id');
+    }
+
+    public function  comprar(){
+        return $this->belongsToMany('User', 'user_compra_contenido', 'ContCompra_id', 'UserCompra_id');
     }
 
 

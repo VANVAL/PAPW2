@@ -47,17 +47,25 @@ class User extends Authenticatable
         return $this->belongsToMany('Notificacion', 'user_recibe_notificacion', 'Usuario_id', 'Notificacion_id');
     }
 
-    //Con Contenido
-    public function contenidos(){ 
-      //Sube
+
+
+    public function subir(){
         return $this->belongsToMany('Contenido', 'user_sube_contenido', 'UserSube_id', 'ContSubido_id');
-    //Like
-         return $this->belongsToMany('Contenido', 'user_likes_contenido', 'UserLike_id', 'ContLike_id');
-    //Comenta
-         return $this->belongsToMany('Contenido', 'user_comenta_contenido', 'UserComenta_id', 'ContComenta_id');
-    //Compra    
-          return $this->belongsToMany('Contenido', 'user_compra_contenido', 'UserCompra_id', 'ContCompra_id');
     }
+
+    public function likes(){
+        return $this->belongsToMany('Contenido', 'user_likes_contenido', 'UserLike_id', 'ContLike_id');
+    }
+
+    public function comentar(){
+        return $this->belongsToMany('Contenido', 'user_comenta_contenido', 'UserComenta_id', 'ContComenta_id');
+    }
+
+    public function comprar(){
+        return $this->belongsToMany('Contenido', 'user_compra_contenido', 'UserCompra_id', 'ContCompra_id');
+    }
+
+
 
 
 //--------------------------------------------------------------------------------------------------

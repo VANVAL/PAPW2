@@ -15,7 +15,7 @@
             </a> 
             </div>
             <div class="NavBarElement">
-            <a href="">
+            <a href="upload">
                 <img class="navBarItem" src="./img/plus.png" alt="Upload">
             </a> 
             </div>

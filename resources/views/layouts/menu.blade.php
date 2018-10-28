@@ -31,7 +31,7 @@
         </div>
         <div class="menuElementB">
             <div id="busqueda">
-                <input type="text" name="txt_busca" placeholder="Search">
+                <input class="barraBusqueda" type="text" name="txt_busca" placeholder="Search">
                 <img src="./img/search.png" alt="Busc">
             </div>
         </div>
