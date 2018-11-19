@@ -43,15 +43,16 @@ Route::get('/content', function () {
 //     return view('layouts.Profile');
 // });
 
-Route::get('profile2', 'UserController@profile');
+Route::get('profile', 'UserController@profile');
 
-Route::post('profile2', 'UserController@update_avatar');
+Route::post('profile', 'UserController@update_avatar');
 /* 
 Route::get('/configurations', function () {
     return view('layouts.configurations');
 }); */
 
-Route::get('configurations2', 'UserController@configure');
+Route::get('configurations', 'UserController@configure');
+Route::post('configurations', 'UserController@update_avatar');
 
 //$n= 'foto'.time().'.'.$ext;
 /*Route::post ('foto',function(request $request){

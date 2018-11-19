@@ -4,28 +4,63 @@
         <meta charset="utf-8">
         <title>User</title>
         <link href="./css/userProfile.css" rel="stylesheet"  type="text/css">
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/navBar.css" />
     
     </head>
 
     <body>
-    @include('layouts.navBar')
+    <!--@include('layouts.navBar')-->
+     <div id="NavBarContainer">
+            <div class="NavBarElement">
+            <a href="profile">
+                <img class="navBarItem" src="/uploads/avatars/{{$user->avatar}}" alt="User">
+            </a> 
+            </div>
+            <div class="NavBarElement">
+            <a href="upload">
+                <img class="navBarItem" src="./img/plus.png" alt="Upload">
+            </a> 
+            </div>
+            <div class="NavBarElement">
+            <a href="configurations">
+                <img class="navBarItem" src="./img/Gear2.png" alt="Settings">
+            </a> 
+            </div>        
+        </div>
+
+
+
         <div class="coverLayout">
             <div class="coverImage">
-                    <img id="robin" src="img/placeholder-square2.jpg" alt="COVER" />
+                    <img id="robin" src="/uploads/covers/{{$user->cover}}" alt="COVER" />
             </div>
 
             <div class="Avatar">
-                    <img src="img/avatarPlaceholder2.png" alt="AVATAR" />
-
+                    <!--<img src="img/avatarPlaceholder2.png" alt="AVATAR" />-->
+                    @isset($user)
+                    <img src="/uploads/avatars/{{$user->avatar}}" alt="AVATAR" />
+                    @endisset
             </div>
         </div>
 
         <div class="infoUsuario">
+            <!--<form enctype="multipart/form-data" action="/profile" method="POST">
+                <input type="file" name="avatar">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" name="">
+            </form>-->
+            @isset($user)
             <h3>
-                Usuario
+                {{$user->name}}
             </h3>
+             @endisset
             <p id="descUsuario">
-                Wububububububub
+                @isset($user)
+                {{$user->desc}}
+                 @endisset
+                
+
+               <!-- Wububububububub
                 Me gusta el cereal
                 Quiero leche con chocolate!
                 A mi me gusta la gasolinaaaaa
@@ -33,19 +68,23 @@
                 Y los paseos en la playa.
                 :D
 
-                NO ASUMAS MI GENERO! >=U
+                NO ASUMAS MI GENERO! >=U-->
                 
             </p>
             <div id="datosContacto">
                 <div id="mail">
                     CONTACTO:
-                    usuario@mail.com
+                    @isset($user)
+                {{$user->email}}
+                 @endisset
                 </div>
                 <br/>
                 <div id="RedesSociales">
-                    Redes Sociales
+                    Fecha de Nacimiento
                     <br/>
-                    Mi facebook uwu
+                    @isset($user)
+                {{$user->FechNac}}
+                 @endisset
                 </div>
                 <div id="followUser"> 
                <img src="./img/heart.png" alt="Follow"> 
@@ -53,8 +92,10 @@
                  <br/>
                 
                     <h3>Give love!</h3>
+
                 </div>
             </div> 
+            
         </div><!--CIERRA InfoUsuario-->
 
         <div id="allContent">

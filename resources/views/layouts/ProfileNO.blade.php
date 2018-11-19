@@ -15,31 +15,17 @@
             </div>
 
             <div class="Avatar">
-                    <!--<img src="img/avatarPlaceholder2.png" alt="AVATAR" />-->
-                    @isset($user)
-                    <img src="/uploads/avatars/{{$user->avatar}}" alt="AVATAR" />
-                    @endisset
+                    <img src="img/avatarPlaceholder2.png" alt="AVATAR" />
+
             </div>
         </div>
 
         <div class="infoUsuario">
-            <form enctype="multipart/form-data" action="/profile2" method="POST">
-                <input type="file" name="avatar">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" name="">
-            </form>
-            @isset($user)
             <h3>
-                {{$user->name}}
+                Usuario
             </h3>
-             @endisset
             <p id="descUsuario">
-                @isset($user)
-                {{$user->desc}}
-                 @endisset
-                
-
-               <!-- Wububububububub
+                Wububububububub
                 Me gusta el cereal
                 Quiero leche con chocolate!
                 A mi me gusta la gasolinaaaaa
@@ -47,23 +33,19 @@
                 Y los paseos en la playa.
                 :D
 
-                NO ASUMAS MI GENERO! >=U-->
+                NO ASUMAS MI GENERO! >=U
                 
             </p>
             <div id="datosContacto">
                 <div id="mail">
                     CONTACTO:
-                    @isset($user)
-                {{$user->email}}
-                 @endisset
+                    usuario@mail.com
                 </div>
                 <br/>
                 <div id="RedesSociales">
-                    Fecha de Nacimiento
+                    Redes Sociales
                     <br/>
-                    @isset($user)
-                {{$user->FechNac}}
-                 @endisset
+                    Mi facebook uwu
                 </div>
                 <div id="followUser"> 
                <img src="./img/heart.png" alt="Follow"> 
@@ -71,10 +53,8 @@
                  <br/>
                 
                     <h3>Give love!</h3>
-
                 </div>
             </div> 
-            
         </div><!--CIERRA InfoUsuario-->
 
         <div id="allContent">

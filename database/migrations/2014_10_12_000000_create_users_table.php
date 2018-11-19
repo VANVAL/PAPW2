@@ -19,10 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('avatar')->default('default.jpg');
+            $table->string('cover')->default('default.jpg');
             $table->string('password');
             $table->rememberToken();
             $table->date('FechNac')->default('2000-01-01');
             $table->string('desc')->default('Soy Chidori');
+            $table->string('gender')->default('Other');
+            //$table->string('artist')->default('No specificated');
            // $table->date('FechNac');
             //$table->binary('ImgPortada');
             //$table->binary('ImgPerfil');

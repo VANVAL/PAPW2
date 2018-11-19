@@ -9,7 +9,7 @@
         <div class="sidebar">
             
 
-            <a href="profile"><img id="fotoPerfil" src="/uploads/avatars/{{$user->avatar}}" alt="profile picture"  /></a>
+            <a href="profile"><img id="fotoPerfil" src="img/avatarPlaceholder2.png" alt="profile picture"  /></a>
 
           
         </div>
@@ -32,7 +32,7 @@
                 <br>
                 <br>
                 <label class="negritas">FIRST NAME</label><br>
-                <input type="text" name="txtName1" value="{{$user->name}}">
+                <input type="text" name="txtName1">
                 <br>
                 <br>
                  <label class="negritas">LAST NAME</label><br>
