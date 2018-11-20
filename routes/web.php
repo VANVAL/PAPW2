@@ -50,7 +50,7 @@ Route::get('profile', 'UserController@profile');
 Route::get('main', 'UserController@main');
 //Route::get('xxfxdf', 'UserController@navbar');
 
-//Route::post('profile2', 'UserController@update_avatar');
+Route::post('profile', 'UserController@update_avatar');
 
 Route::resource('userC','UserController2@update');
 
@@ -59,6 +59,7 @@ Route::post('profile', 'UserController@update_avatar');
 Route::get('/configurations', function () {
     return view('layouts.configurations');
 }); */
+
 
 /*Route::resource('edit', 'UserController2');*/
 

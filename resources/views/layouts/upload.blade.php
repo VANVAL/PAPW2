@@ -9,7 +9,6 @@
     </head>
     <body>
         @include ('layouts.menu')
-        @include ('layouts.navBar')
         <div id="leftContainer">
             <div id="formContent">
                 <form action="" enctype="multipart/form-data" method="POST">

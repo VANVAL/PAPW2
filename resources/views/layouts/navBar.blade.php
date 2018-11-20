@@ -10,7 +10,7 @@
     <body>
         <div id="NavBarContainer">
             <div class="NavBarElement">
-            <a href="profile">
+            <a href="profileNO">
                 <img class="navBarItem" src="./img/avatarPlaceholder2.png" alt="User">
             </a> 
             </div>
