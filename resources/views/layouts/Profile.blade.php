@@ -14,7 +14,8 @@
         <div id="mainContainer">
             <div class="coverLayout">
                         <div class="coverImage">
-                                <img id="robin" src="img/SeHablaGamer.png" alt="COVER" />
+                                <!--<img id="robin" src="img/SeHablaGamer.png" alt="COVER" />-->
+                                <img id="robin" src="/uploads/covers/{{$user->cover}}" alt="COVER" />
                         </div>
 
                         <div class="Avatar">
@@ -26,11 +27,11 @@
             </div>
 
             <div class="infoUsuario">
-                <form enctype="multipart/form-data" action="/profile2" method="POST">
+                <!--<form enctype="multipart/form-data" action="/profile2" method="POST">
                     <input type="file" name="avatar">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="submit" name="">
-                </form>
+                </form>-->
                 @isset($user) 
                     <div id="datosContacto">
                         <div class="seccion">
