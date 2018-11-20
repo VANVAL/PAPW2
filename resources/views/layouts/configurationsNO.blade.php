@@ -9,7 +9,7 @@
         <div class="sidebar">
             
 
-            <a href="profile"><img id="fotoPerfil" src="/uploads/avatars/{{$user->avatar}}" alt="profile picture"  /></a>
+            <a href="profile"><img id="fotoPerfil" src="img/avatarPlaceholder2.png" alt="profile picture"  /></a>
 
           
         </div>
@@ -26,6 +26,7 @@
             <br>
             <br>
 
+<<<<<<< HEAD:resources/views/layouts/configurations2.blade.php
            
             <!--<form id="datosUsuario" method="post">-->
            
@@ -37,6 +38,25 @@
     <br>
     <LABEL class="negritas">GENRE</LABEL><br>
     <input type="radio" name="gender" value="male" > Male<br>
+=======
+            <img id="cerebrito" src="img/logocerebro.png">
+
+            <form id="datosUsuario" method="post">
+                <label class="negritas">TITLE PROFILE</label><br>
+                <input type="text" name="txtTitle">
+                <br>
+                <br>
+                <label class="negritas">FIRST NAME</label><br>
+                <input type="text" name="txtName1">
+                <br>
+                <br>
+                 <label class="negritas">LAST NAME</label><br>
+                <input type="text" name="txtName2">
+                <br>
+                <br>
+                <LABEL class="negritas">GENRE</LABEL><br>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+>>>>>>> ea30eb7d9b963c96e4d5f9c0ba77d786734ea7c3:resources/views/layouts/configurationsNO.blade.php
   <input type="radio" name="gender" value="female"> Female<br>
   <input type="radio" name="gender" value="other" checked> Other
   <br>

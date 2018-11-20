@@ -10,8 +10,6 @@
     </head>
 
     <body>
-
-
     @include('layouts.menu')
         <div id="mainContainer">
             <div class="coverLayout">

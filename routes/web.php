@@ -45,8 +45,9 @@ Route::get('/content', function () {
 //     return view('layouts.Profile');
 // });
 
-Route::get('profile2', 'UserController@profile');
+Route::get('profile', 'UserController@profile');
 
+<<<<<<< HEAD
 Route::get('main', 'UserController@main');
 //Route::get('xxfxdf', 'UserController@navbar');
 
@@ -54,12 +55,20 @@ Route::post('profile2', 'UserController@update_avatar');
 
 Route::resource('userC','UserController2@update');
 
+=======
+Route::post('profile', 'UserController@update_avatar');
+>>>>>>> ea30eb7d9b963c96e4d5f9c0ba77d786734ea7c3
 /* 
 Route::get('/configurations', function () {
     return view('layouts.configurations');
 }); */
 
+<<<<<<< HEAD
 //Route::resource('edit', 'UserController2');
+=======
+Route::get('configurations', 'UserController@configure');
+Route::post('configurations', 'UserController@update_avatar');
+>>>>>>> ea30eb7d9b963c96e4d5f9c0ba77d786734ea7c3
 
 //$n= 'foto'.time().'.'.$ext;
 /*Route::post ('foto',function(request $request){
