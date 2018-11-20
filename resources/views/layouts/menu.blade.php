@@ -11,22 +11,12 @@
     <div id="container">
         <div class="menuElement">
             <div id="LogoContainer">
-                <a href=""><img id="logo" src="./img/Creator_Logo_T.png" alt="Logo"> <h4>CREATOR</h4></a>
+                <a href=""><img id="logo" src="./img/logoAlt.png" alt="Logo"> <h4>CREATOR</h4></a>
             </div>
         </div>
         <div class="menuElement">
-            <div class="menuItem">
-                <a href=""><h4>Categoria</h4></a>
-            </div>
-        </div>
-        <div class="menuElement">
-            <div class="menuItem">
-                <a href=""><h4>Categoria</h4></a>
-            </div>
-        </div>
-        <div class="menuElement">
-            <div class="menuItem">
-                <a href=""><h4>Categoria</h4></a>
+            <div id="symbol">
+                <a href=""><img id="logo" src="./img/money.png" alt="For Sale"></a>
             </div>
         </div>
         <div class="menuElementB">
@@ -35,6 +25,33 @@
                 <img src="./img/search.png" alt="Busc">
             </div>
         </div>
+        <div id="otherContainer"> 
+            <div class="menuItem">
+                <div id="user">
+                    <!--<a href="profile2"><p>USER</p></a>-->
+                    @isset($user)
+                     <a href="profile2"><p>{{$user->name}}</p></a>
+                    @endisset    
+                </div> 
+            </div>
+            <div class="menuItem">
+                <a href="profile2">
+                    <img src="./img/avatarPlaceholder2.png" alt="User">
+                </a> 
+            </div>
+
+            <div class="menuItem">
+                <a href="upload">
+                    <img src="./img/plus.png" alt="Upload">
+                </a> 
+            </div>
+
+            <div class="menuItem">
+                <a href="">        
+                    <img  src="./img/Gear2.png" alt="Settings">
+                </a>  
+            </div>
+        </div>     
     </div>
 </body>
 </html>

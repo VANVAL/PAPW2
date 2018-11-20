@@ -1,13 +1,18 @@
 @font-face {
   font-family: myFirstFont;
   src: url('fonts/CANDARA.TTF') format('truetype');
+
+  font-family: mySecondFont;
+    src: url('fonts/CooperHewitt-Light.otf');
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: myFirstFont;
-  background-image: url("../img/diagonal-noise.png");
+  font-family: mySecondFont;
+  background-color: #0B0C10;
+}
+
+p{
+  color: white;
 }
 
 
@@ -20,22 +25,23 @@ body {
  div.coverLayout{
   margin: 0;
   padding: 0;
-  top: 0;
+  top: 0px;
   left: 0;
   display: inline-block;
   height: 200px;
-  width: 95vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
-
 }
 
 .coverImage{
   width: 85%;
   height: 100%;
-  display: inline-block;
+  display: block;
   position: relative;
   float: right;
+  right: 1px;
+  overflow-y: hidden;
 }
 
 div.coverLayout .coverImage #robin{
@@ -44,7 +50,7 @@ div.coverLayout .coverImage #robin{
   transform: translate(-50%,-50%);
   position: relative;
   display: block;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -54,16 +60,16 @@ div.coverLayout .coverImage #robin{
   width: 15%;
   top: 0;
   left: 0;
- position: relative;
+  position: absolute;
   display: inline-block;
   overflow: hidden;
-  z-index: 2;
+  padding-top: 8px;
 }
 
 div.coverLayout .Avatar img{
-  height:100%;
-  width: 100%;
-
+  height: 95%;
+  width: 95%;
+  border-radius: 100px;
 }
 
  div.menu{
@@ -87,7 +93,6 @@ div.menu .botonesSolicitud{
 
 
 div.contenido{
-
   display: block;
   position: relative;
   margin-top: 30px;
@@ -95,8 +100,13 @@ div.contenido{
   transform: translate(-50%);
   width: 900px;
   height: auto;
-  background: gray;
-
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-color: #1F2833;
+  border-radius: 20px;
+  background-color: #0B0C10;
+  padding: 10px;
+  margin-bottom: 100px;
 } 
 
 
@@ -108,139 +118,132 @@ div.contenido{
   left: 50%;
   transform: translate(-50%);
   top: 30px;
-  border-radius: 30px;
+  margin-bottom: 50px;
 }
 
 
 div.contenido div.botones{
+  top: -15px;
+  left: 45px;
   display: block;
   position: relative;
-  width: auto;
-  height: auto;
+  width: 90%;
+  height: 50px;
+  margin: 20px 0px 20px 0px;
+}
+
+#icons{
+  height: 60px;
+}
+
+.media-icon{
+  height: 100%;
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.botones img{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 5px auto;
+  position: relative;
+  margin-right: 15px;
   float: right;
-
 }
 
 
-div.contenido .iHeart{
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  margin: 5px auto;
-  position: relative;
-  transform: translate(200px, 20px);
-}
-
-
-div.contenido .wrong{
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  margin: 5px auto;
-  position: relative;
-  transform: translate(200px, 20px);
-}
-
-div.contenido .icomment{
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  margin: 1px auto;
-  position: relative;
-  transform: translate(165px, -20px);
-}
-
-div.contenido .likes{
+.botones label{
   width: 30px;
   height: 30px;
   display: inline-block;
   margin: 1px auto;
   position: absolute;
-  transform: translate(178px, 25px);
+  top: 3px;
+  left: 0px;
+  text-align: center;
 }
 
-div.contenido .comentaritos{
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  margin: 1px auto;
-  position: absolute;
-  transform: translate(145px, -17px);
-}
 
   div.contenido .hashtag{
-    color: blue;
-    width: auto;
-    height: auto;
-    display: inline-block;
-    position: relative;
-    left: 20px;
-}
-
-div.contenido .textoOpc{
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  margin-top: 25px;
-  margin-left: 20px;
-}
-
-h3{
-  text-align: center;
-  top: 10px;
-  display: block;
-  position: relative;
-  margin: 0px;
-}
-
-.infoUsuario{
-  display: inline-block;
-    position: relative;
-    width: 15%;
-    height: auto;
-    top: 0px;
-    left: 0px;
-    padding: 0px;
-    background: linear-gradient(360deg, turquoise, lightgreen);
-}
-
-
-
-div.infoUsuario #descUsuario{
-  color: black;
-  display: block;
-  position: relative;
-  padding: 10px;
-  text-align: justify;
-}
-
-
-#datosContacto{
-  color: black;
-}
-
-#datosContacto div#mail, #datosContacto div#RedesSociales{
- text-align: center;
-}
-
-
-#datosContacto div#followUser{
-  height: 200px;
-  width: 100%;
-  display: block;
-  position: relative;
-}
-
-
-#datosContacto div#followUser  img{
-  height: 50%;
+  color: #45A29E;
   width: auto;
-  display: block;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  left: 20px;
+}
+
+.hashtagContainer{
+  width: 90%;
+  height: auto;
+  display: inline-block;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
+
+div.contenido .textoOpc{
+  display: block;
+  position: relative;
+  width: 90%;
+  top: -30px;
+  left: 40px;
+  text-align: justify;
+  border-top-style: solid;
+  border-top-color: #1F2833;
+  color: white;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+
+.infoUsuario{
+  display: inline-block;
+  position: fixed;
+  width: 15%;
+  height: auto;
+  top: 250px;
+  left: 0px;
+  padding: 0px;
+  border-style: solid;
+  border-left-style: none;
+  border-color: #1F2833;
+  border-radius: 0px 20px 20px 20px;
+  color: white;
+  text-align: center;
+}
+
+
+#datosContacto{
+
+}
+
+#datosContacto .seccion{
+  width: 100%;
+  height: auto;
+  margin: 20px 0px 20px 0px;
+}
+
+
+.media-icon img{
+  height: auto;
+  width: 100%;
+}
+
+#followUser img{
+  height: 100%;
+  width: auto;
+}
+
+#followUser{
+  height: 100px;
+}
+
+
 
 #allContent{
   display: inline-block;
@@ -251,60 +254,10 @@ div.infoUsuario #descUsuario{
   right: 54px;
 }
 
-
-
-
-/* #mainBody{
-    height: auto;
-    width: 100vw;
-    display: block;
-    position: absolute;
-    top: 80%;
-
-
-    
+#mainContainer{
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  top: 42px;
 }
-
-
-div.filaBody{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
-  background-image: url("../img/diagonal-noise.png");
-    
-}
-
-@media screen and (min-width: 500px) {
-    div.filabody {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  @media screen and (max-width: 800px) {
-    div.filaBody {
-      grid-template-columns: 1fr 1fr ;
-    }
-  }
-
-
-div.bodyElement{
-    height: auto;
-    width: 260px;
-    display: inline-block;
-    position: relative;
-    padding: 10px 25px 10px 25px;
-    align-content: center;
-    
-}
-
-div.bodyElement img{
-    height: auto;
-    width: 260px;
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-} */

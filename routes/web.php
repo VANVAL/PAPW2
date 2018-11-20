@@ -18,7 +18,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@main')->name('main');
 
 //No borrar
  Route::get('/main', function () {
@@ -34,6 +35,7 @@ Route::get('/content', function () {
     return view('layouts.content');
 });
 
+
 /* Route::get('/profile2', function () {
     return view('layouts.Profile2');
 }); */
@@ -45,13 +47,19 @@ Route::get('/content', function () {
 
 Route::get('profile2', 'UserController@profile');
 
+Route::get('main', 'UserController@main');
+//Route::get('xxfxdf', 'UserController@navbar');
+
 Route::post('profile2', 'UserController@update_avatar');
+
+Route::resource('userC','UserController2@update');
+
 /* 
 Route::get('/configurations', function () {
     return view('layouts.configurations');
 }); */
 
-Route::get('configurations2', 'UserController@configure');
+//Route::resource('edit', 'UserController2');
 
 //$n= 'foto'.time().'.'.$ext;
 /*Route::post ('foto',function(request $request){

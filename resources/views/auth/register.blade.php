@@ -59,7 +59,7 @@
 
                         <div class="form-grouprow">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" id="btn btn-primary">
+                                <button type="submit" id="btn-primary">
                                     {{ __('Enter') }}
                                 </button>
                             </div>
@@ -70,3 +70,4 @@
         </div>
     </div>
 </div>
+

@@ -1,7 +1,11 @@
 
 @font-face {
     font-family: myFirstFont;
-    src: url('fonts/CANDARA.TTF') format('truetype');
+    src: url('fonts/ostrich-regular.ttf') format('TrueType');
+     
+    font-family: mySecondFont;
+    src: url('fonts/CooperHewitt-Light.otf');
+    
 }
 
 
@@ -9,7 +13,7 @@ body{
     font-family: myFirstFont;
     margin: 0;
     padding: 0;
-    background-image: url("../img/diagonal-noise.png");
+   /* background-image: url("../img/diagonal-noise.png");*/
     overflow: hidden;
 
 }
@@ -19,7 +23,7 @@ div#logoDIV{
     width: 80%;
     height: 100vh;
     position: relative;
-    
+    background-color: #0B0C10;
     }
 
 div#logoDIV logo{
@@ -27,10 +31,15 @@ div#logoDIV logo{
     position: absolute;
 }
 
-div#logoDIV img{
-    height: 100%;
+div #logo{
     width: 100%;
-    transform: translate(-50%);
+    height: 100%;
+}
+
+div#logoDIV img{
+    height: auto;
+    width: 45%;
+    transform: translate(-50%,-50%);
     position: relative;
     top: 50%;
     left: 50%;
@@ -47,30 +56,33 @@ div#logoDIV img{
 
 
 .slogan #parrafo1{
+    font-family: mySecondFont;
     position: relative;
-    top: 0%;
-    left: 30px;
+    top: 35%;
+    left: 50px;
     font-style: italic;
     font-size: 30px;
-    color: #158f89;
-    text-shadow: 2px 2px 4px #7bc74d;
+    color: #45A29E;
+   
 }
 
 
 .slogan #parrafo2{
+    font-family: mySecondFont;
     position: absolute;
     text-align: center;
     bottom: 50%;
     right: 50px;
     font-style: italic;
     font-size: 30px;
-    color: #158f89;
-    text-shadow: 2px 2px 4px #7bc74d;
+    color: #45A29E;
+    
 }
 
 
 
 div#sideBarDIV{
+    
     display: inline-block;
     position: absolute;
     top: 0px;
@@ -78,7 +90,9 @@ div#sideBarDIV{
     margin: 0px;
     height: 100vh;
     width:20%;
-    background: linear-gradient(360deg, turquoise, lightgreen);
+   /* background: linear-gradient(360deg, turquoise, lightgreen);*/
+   background-color: #1F2833;
+   
     overflow-x: hidden;
     
 }
@@ -92,44 +106,17 @@ div #formDIV{
 
 }
 
-#btnSubmit{
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    transform: translate(50%,50%);
-    top: 50%;
-    left: 50%;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #9444fb;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-}
 
-#btnSubmit:hover {
-    background-color: orange;
-    color:#22145f;
-}
-    
 
-#btnSubmit:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-}
 
-div.form-grouprow{
+.form-grouprow{
     position: relative;
     display: block;
     left: 14%;
 
 }
 
-div.form-grouprow div input{
+.form-grouprow div input{
     border-radius: 10px;
     width: 200px;
     height: 22px;
@@ -139,7 +126,7 @@ div.form-grouprow div input{
 
 
 
-dib button #btn-primary{
+#btn-primary{
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
@@ -157,7 +144,13 @@ dib button #btn-primary{
     box-shadow: 0 9px #999;
 }
 
-div button  #btn{
+
+#btn-primary:hover {
+    background-color: #66FCF1;
+    color:#22145f;
+}
+
+#btn-primary2{
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
@@ -175,13 +168,22 @@ div button  #btn{
     box-shadow: 0 9px #999;
 }
 
-div.card-header{
+
+#btn-primary2:hover {
+    background-color: #66FCF1;
+    color:#22145f;
+}
+    
+
+
+.card-header{
+    font-family: mySecondFont;
     margin-bottom: 10px;
     margin-top: 30px;
     position: relative;
     display: block;
     left: 15%;
-    color: blueviolet;
+    color: #66FCF1;
 }
 
 
@@ -210,8 +212,9 @@ h6{
 
 
 p{
+    font-family: mySecondFont;
     position: relative;
-    color:#393e46;
+    color:white;
     margin-top:90px;
     left:  30%;
 }
@@ -220,4 +223,8 @@ a{
     position: relative;
     display: block;
     left: 42%;
+}
+
+#hidden{
+   
 }

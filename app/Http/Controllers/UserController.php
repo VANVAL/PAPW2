@@ -13,8 +13,17 @@ class UserController extends Controller
     public function profile(){
     	return view('layouts.Profile2', array('user'=> Auth::user()));
 	}
+
+	public function main(){
+    	return view('layouts.main', array('user'=> Auth::user()));
+	}
+
+	public function navbar(){
+    	return(array('user'=> Auth::user()));
+	}
+
 	public function configure(){
-    	return view('layouts.configurations2', array('user'=> Auth::user()));
+    	return view('layouts.edit', array('user'=> Auth::user()));
     }
 
     public function update_avatar(Request $request){

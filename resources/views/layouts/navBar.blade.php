@@ -20,7 +20,7 @@
             </a> 
             </div>
             <div class="NavBarElement">
-            <a href="configurations">
+            <a>        
                 <img class="navBarItem" src="./img/Gear2.png" alt="Settings">
             </a> 
             </div>        

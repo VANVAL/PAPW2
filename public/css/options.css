@@ -74,13 +74,13 @@ a{
 
 
 .imageList{
-                top: 0%;
-                left: 0%;
-                width: 80%;
-                height: auto;
-                display: block;
-                position: absolute;
-                transform: translate(50%,0%);
+    top: 0%;
+    left: 0%;
+    width: 80%;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    transform: translate(50%,0%);
           }
 
 #tituloReportes{
@@ -217,9 +217,11 @@ position: absolute;
 
   #cerebrito{
     
-    position: absolute;
-    left: 25%;
-    width: 35%;
-
-
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 300px;
+    right: -75%;
+    z-index: 3;
+    margin-top: 6%; 
   }

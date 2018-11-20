@@ -16,7 +16,7 @@
         
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <!--<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -26,12 +26,11 @@
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
-            @endif
-
-            <div class="content">
+            @endif     
+        </div>-->
+        <div class="content">
                 @include('layouts.registro')
                 @include('layouts.sidebar')
             </div>
-        </div>
     </body>
 </html>
