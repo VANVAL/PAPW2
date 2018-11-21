@@ -18,6 +18,9 @@
 
            
             <div id="rightSide">
+                <div id="titleHere">
+                    <h2>Titulo</h2>
+                </div>
                 <div class="datosUsuario">
                     <img class="avatarUsuario" src="./img/cerebrito.png" alt="USER" />
                     <p class="nombreUsuario">
