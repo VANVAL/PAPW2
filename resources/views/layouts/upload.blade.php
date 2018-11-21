@@ -42,8 +42,11 @@
                         <textarea class="inputText" name="" id="" cols="30" rows="10"></textarea>
                         <p>*Please, begin each tag with "#" and write each tag in a new line. Example:"#fanart, #shipping, #cartoon"</p>
                         <br>
-                    <input  id="btnDraft" type="submit" value="Save as Draft">
-                    <input id="btnUpload"type="submit" value="Upload">
+                        <div id="contieneBtn"> 
+                            <input  id="btnDraft" type="submit" value="Save as Draft">
+                            <input id="btnUpload"type="submit" value="Upload">
+                        </div>
+                   
                 </form>
             </div>    
         </div>

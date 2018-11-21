@@ -39,9 +39,7 @@ body{
 }
 
 #formContent input:not(.radiobtn), 
-input:not(.inputText), 
-input:not(.barraBusqueda),
-#busqueda:not(.barraBusqueda){
+{
     height: 23px;
     display: inline-block;
     position: relative;
@@ -59,6 +57,12 @@ input:not(.barraBusqueda),
     left: 50%;
     top: -15px;
     transform: translate(-50%);
+}
+
+#contieneBtn{
+    top: -25px;
+    left: 0px;
+    position: relative;
 }
 
 label, p{
@@ -103,10 +107,16 @@ textarea{
     border: none;
     background-color: lightblue;
     margin-right: 20px;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-90%);
 }
 
-#btnUpload{
-    
+#btnFile{
+    position: relative;
+    top: -25px;
+    left: 24%;
 }
 
 #selectCategory{

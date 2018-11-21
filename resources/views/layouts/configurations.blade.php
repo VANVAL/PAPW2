@@ -7,64 +7,51 @@
     </head>
     <body>
         <div class="sidebar">
-            
-
-            <a href="profile"><img id="fotoPerfil" src="/uploads/avatars/{{$user->avatar}}" alt="profile picture"  /></a>
-
-          
+            <a href="profile"><img id="fotoPerfil" src="/uploads/avatars/{{$user->avatar}}" alt="profile picture"  /></a>    
         </div>
 
 
-        <div class="imageList">
+        <div class="infoContainer">
             <h2 id="tituloReportes">User Information</h2>
-            <hr>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <img id="cerebrito" src="img/logocerebro.png">
+            <img id="cerebrito" src="./img/logocerebro.png">
 
             <form id="datosUsuario" method="post" action="/configurations" enctype="multipart/form-data">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    
                 
-                <br>
-    <br>
-    <label class="negritas">USERNAME</label><br>
-    <input type="text" name="UserName" value="{{$user->name}}" required>
-    <br>
-    <br>
-    <LABEL class="negritas">GENRE</LABEL><br>
-    <input type="radio" name="Gender" value="male" > Male<br>
-  <input type="radio" name="Gender" value="female"> Female<br>
-  <input type="radio" name="Gender" value="other" checked> Other
-  <br>
-  <br>
-  <label class="negritas">DATE OF BIRTH</label>
-  <br>
-   <input type="date" name="Bday" value="{{$user->FechNac}}">
-   <br>
-   <br>
-
-  <br>
-  <br>
-  <label class="negritas">ABOUT ME</label><br>
-  ​<textarea id="txtArea" name="About"  rows="10" cols="70">{{$user->desc}}</textarea>
-  <br>
-  <br>
-  <label class="negritas">SELECT AVATAR</label><br>
-  <img src="/uploads/avatars/{{$user->avatar}}"><br>
-  <input type="file" name="avatar">
-  <br>
-  <br>
-  <label class="negritas">SELECT COVER</label><br>
-  <img src="/uploads/covers/{{$user->cover}}"><br>
-  <input type="file" name="cover">
-  <br>
-  <br>
-  <input type="submit" name="save">
+                <label class="negritas">USERNAME</label>
+                <input class="inputInfo" type="text" name="UserName" value="{{$user->name}}" required>
+            
+                <label class="negritas">GENRE</label>
+                <div class="inputInfo" style="color: white;" >
+                    <input class="radio" type="radio" name="Gender" value="male" > Male<br>
+                    <input class="radio" type="radio" name="Gender" value="female"> Female<br>
+                    <input class="radio"type="radio" name="Gender" value="other" checked> Other
+                </div>
+            
+                <label class="negritas">DATE OF BIRTH</label>
+                <input class="inputInfo" type="date" name="Bday" value="{{$user->FechNac}}">
+                
+                
+                <label class="negritas">ABOUT ME</label><br>
+                ​<textarea  class="inputInfo" id="txtArea" name="About"  rows="10" cols="70">{{$user->desc}}</textarea>
+                
+                
+                <label class="negritas">SELECT AVATAR</label><br>
+                <div class="inputInfo">
+                    <img src="/uploads/avatars/{{$user->avatar}}"><br>
+                    <input type="file" name="avatar" style="left: 25%;top: -95px;position: relative;">>
+                </div>
+                
+                
+                <label class="negritas">SELECT COVER</label><br>
+                <div class="inputInfo">
+                    <img src="/uploads/covers/{{$user->cover}}"><br>
+                    <input type="file" name="cover">
+                </div>
+                
+                <input id="btnSave" type="submit" name="save" value="Save Changes">
             </form>
-           </div>
+        </div>
     </body>
 </html>
