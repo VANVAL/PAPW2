@@ -48,7 +48,7 @@ Route::get('/content', function () {
 Route::get('profile', 'UserController@profile');
 
 Route::get('main', 'UserController@main');
-//Route::get('xxfxdf', 'UserController@navbar');
+
 
 Route::post('profile', 'UserController@update_avatar');
 

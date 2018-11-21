@@ -30,13 +30,15 @@
                 <div id="user">
                     <!--<a href="profile2"><p>USER</p></a>-->
                     @isset($user)
-                     <a href="profile2"><p>{{$user->name}}</p></a>
+                     <a href="/profile"><p>{{$user->name}}</p></a>
                     @endisset    
                 </div> 
             </div>
             <div class="menuItem">
-                <a href="profile2">
-                    <img src="./img/avatarPlaceholder2.png" alt="User">
+                <a href="profile">
+                    @isset($user)
+                    <img src="/uploads/avatars/{{$user->avatar}}" alt="User">
+                    @endisset  
                 </a> 
             </div>
 
@@ -47,7 +49,7 @@
             </div>
 
             <div class="menuItem">
-                <a href="">        
+                <a href="/configurations">        
                     <img  src="./img/Gear2.png" alt="Settings">
                 </a>  
             </div>
