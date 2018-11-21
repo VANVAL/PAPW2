@@ -1,229 +1,227 @@
 
 @font-face {
-                font-family: myFirstFont;
-                src: url('fonts/CANDARA.TTF') format('truetype');
-           }
+    font-family: myFirstFont;
+    src: url('fonts/CANDARA.TTF') format('truetype');
 
-body {
+    font-family: mySecondFont;
+    src: url('fonts/CooperHewitt-Light.otf');
+}
 
-       
-       font-family: myFirstFont;
+body {    
+    font-family: mySecondFont;
     margin: 0;
     padding: 0;
-    background-image: url("../img/diagonal-noise.png");
-    }
+}
 
 .contentViewer{
-                display: block;
-                position: absolute;
-                margin: 0px auto;
-                width: 85vw;
-                height: 135vh;
-                background: linear-gradient(360deg, turquoise, lightgreen);
-                top: 5%;
-                left: 7%;
-             }
+    display: block;
+    position: absolute;
+    margin: 0px auto;
+    width: 85vw;
+    height: 135vh;
+    background-color: #0B0C10;
+    top: 5%;
+    left: 7%;
+}
 
 
 .contentViewer .datosUsuario{
-                                margin-top: 15px;
-                                margin-left: 5px;
-                                float: right;
-                                width: 20%;
-                                height: auto;
-                                display: block;
-                                position: relative;
-                            }
+    margin-top: 15px;
+    margin-left: 5px;
+    float: right;
+    width: 20%;
+    height: auto;
+    display: block;
+    position: relative;
+}
 
 
 div .avatarUsuario{
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 100px;
-                    position: relative;
-                    display: block;
-                    transform: translateX(-55px);
-                }
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+    display: block;
+    transform: translateX(-55px);
+}
 
 
 div .avatarUsuario2{
-                    width: 35px;
-                    height: 35px;
-                    border-radius: 100px;
-                    position: relative;
-                    display: block;
-                    transform: translateX(-55px);
-                }
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    position: relative;
+    display: block;
+    transform: translateX(-55px);
+}
 
 
 div .nombreUsuario{
-                    margin-left: 3px;
-                    position: absolute;
-                    display: block;
-                    margin-top: 10px;
-                    top: 0;
-                    left: 0;
-                }
+    margin-left: 3px;
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+}
 
 
 div .nombreUsuario2{
-                    margin-left: -10px;
-                    margin-top: 0px;
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    left: 0;
-                }
+    margin-left: -10px;
+    margin-top: 0px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
 
 
 div .fecha{
-                margin-left: 5px;
-                position: relative;
-                display: block;
-                transform: translateY(-37px);
-                top: 0;
-                left: 0;
-           }
+    margin-left: 5px;
+    position: relative;
+    display: block;
+    transform: translateY(-37px);
+    top: 0;
+    left: 0;
+}
 
 
 
 div .fecha2{
-            margin-left: -10px;
-            position: relative;
-            display: block;
-            transform: translateY(-32px);
-            top: 0;
-            left: 0;
-          }
+    margin-left: -10px;
+    position: relative;
+    display: block;
+    transform: translateY(-32px);
+    top: 0;
+    left: 0;
+}
 
 div .textoComentario{
-                        display: block;
-                        position: absolute;
-                        text-align: left;
-                        top: 0;
-                        left: 0;
-                        width: 20vw;
-                        transform: translate(-50px,40px);
-                        height: auto;
-                    }
+    display: block;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    transform: translate(-50px,40px);
+    height: auto;
+}
 
 div .textoComentario2{
-                        display: block;
-                        position: absolute;
-                        text-align: left;
-                        top: 0;
-                        left: 0;
-                        width: inherit;
-                        transform: translate(-10px,30px);
-                        height: auto;
-                    }
+    display: block;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 0;
+    width: inherit;
+    transform: translate(-10px,30px);
+    height: auto;
+}
 
 .content .imageTitle{
-                        top: 0;
-                        left: 0;
-                        margin: 0px;
-                        padding: 0px;
-                        transform: translateY(-5px);
-                    }
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    transform: translateY(-5px);
+}
 
 
 .contentViewer .content{
-                            display: inline-block;
-                            position: relative;
-                            margin: 15px;
-                            width: auto;
-                            height: auto;
-                        }
+    display: inline-block;
+    position: relative;
+    margin: 15px;
+    width: auto;
+    height: auto;
+}
 
 
 
 .contentViewer .content .Image{
-                                display: block;
-                                position: relative;
-                                width: 190%;
-                                height: auto;
-                              }
+    display: block;
+    position: relative;
+    width: 190%;
+    height: auto;
+}
 
 
 .contentViewer .buttons{
-                            width: 150px;
-                            height: auto;
-                            margin: 5px;
-                            float: right;
-                            display: inline-block;
-                            transform: translate(8vw,17vh);
-                        }
+    width: 150px;
+    height: auto;
+    margin: 5px;
+    float: right;
+    display: inline-block;
+    transform: translate(8vw,17vh);
+}
 
 .contentViewer .buttons .Reportar{
-                                        margin-left: 5px;
-                                        width: 30px;
-                                        height: 30px;
-                                        display: inline-block;
-                                        cursor: not-allowed;
-                                  }
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    cursor: not-allowed;
+}
 
 
 .contentViewer .buttons .iLOVE{
-                                    width: 30px;
-                                    height: 30px;
-                                    display: inline-block;
-                                }
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
 
 .commentList{
-                position: absolute;
-                display: inline-block;
-                top: 0px;
-                right: 6px;
-                transform: translateY(22vh);
-                width: 21vw;
-                height: auto;
-                z-index: 4;
-                overflow-x: hidden;
-                overflow-y: scroll;
-                margin: 5px;
-            }
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    right: 6px;
+    transform: translateY(22vh);
+    width: 21vw;
+    height: auto;
+    z-index: 4;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 5px;
+}
 
 .commentList ul {
-                    list-style-type: none;
-                }
+    list-style-type: none;
+}
 
 
 .commentList .commentContainer {
-                                    top: 0;
-                                    left: 0;
-                                    width: 80%;
-                                    height: auto;
-                                    transform: translateX(15%);
-                                    display: block;
-                                    position: relative;
-                                    margin-bottom: 25px;
-                               }
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: auto;
+    transform: translateX(15%);
+    display: block;
+    position: relative;
+    margin-bottom: 25px;
+}
 
 .makeComment{
-                top: 0;
-                left: 0;
-                width: 20vw;
-                height: auto;
-                transform: translate(68vw,-72vh);
-                display: block;
-                position: relative;
-            }
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: auto;
+    transform: translate(68vw,-72vh);
+    display: block;
+    position: relative;
+}
 
 .makeComment .commentForm{
-                            top: 0;
-                            left: 0;
-                            height: auto;
-                            width: inherit;
-                            transform: translate(-13px,-28px);
-                          }
+    top: 0;
+    left: 0;
+    height: auto;
+    width: inherit;
+    transform: translate(-13px,-28px);
+}
 
   .makeComment .commentForm .textbox{
-                                      width: 17vw;
-                                    }
+    width: 17vw;
+}
 
-     #MakeAComment{
-
-                                       
+#MakeAComment{                                    
     border : solid 0px #947394;
     border-radius : 8px;
     moz-border-radius : 8px;
@@ -234,6 +232,4 @@ div .textoComentario2{
     color : #fcfcfc;
     padding : 1px 10px;
     background-color : #1a00ff;
-
-
-                                    }
+}
