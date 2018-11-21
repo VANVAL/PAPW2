@@ -16,10 +16,16 @@ class CreateContenidosTable extends Migration
         Schema::create('contenidos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Titulo');
+            $table->string('multimedia');
             $table->string('Descripcion');
-            $table->boolean('Draft');
-            $table->dateTime('Fecha');
-            $table->integer('Precio');
+            $table->string('Categoria');
+            $table->boolean('Draft')->default('0');
+            $table->string('ForSale');
+            $table->integer('price')->default('0');
+            $table->string('hashtag1');
+            $table->string('hashtag2');
+            $table->string('hashtag3');
+            $table->string('hashtag4');
             $table->timestamps();
         });
     }

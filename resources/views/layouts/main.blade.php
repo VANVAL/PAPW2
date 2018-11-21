@@ -13,42 +13,17 @@
     <div id="mainBody">
         <h2> Featured Creations</h2>
         <div class="filaBody">
+            @isset($contents)
+             @foreach($contents as $objects)
             <div class="bodyElement">
-                <img src="./img/v_hart.png" alt="artwork">
+
+                <!--<img src="./img/v_hart.png" alt="artwork">-->
+                <img src="/uploads/contents/{{$objects->multimedia}}" alt="artwork">
+                
+                
             </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/chiruno.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/Eve_Concept.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/mareesai4.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/dreamteamFinished.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/Editt2.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/FanartBayoRobin2.jpg" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/JustMonika.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/JustMonika.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/JustMonika.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/JustMonika.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
-            <div class="bodyElement">
-                <img src="./img/JustMonika.png" alt="artwork">
-            </div> <!--Cierra un elemento -->
+            @endforeach
+            @endisset
             
         </div><!--Cierra una fila -->   
 

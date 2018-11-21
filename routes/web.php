@@ -55,16 +55,16 @@ Route::post('profile', 'UserController@update_avatar');
 Route::resource('userC','UserController2@update');
 
 Route::post('profile', 'UserController@update_avatar');
-/* 
-Route::get('/configurations', function () {
-    return view('layouts.configurations');
-}); */
 
-
-/*Route::resource('edit', 'UserController2');*/
 
 Route::get('configurations', 'UserController@configure');
 Route::post('configurations', 'UserController@update_avatar');
+
+Route::post('upload', 'ContentController@save_contenido');
+Route::get('upload', 'ContentController@ver_usuario');
+
+Route::get('main', 'ContentController@ver_contenido');
+//Route::get('main', 'ContentController@ver_contenidoyusuario');
 
 //$n= 'foto'.time().'.'.$ext;
 /*Route::post ('foto',function(request $request){

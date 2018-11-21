@@ -28,5 +28,6 @@ class HomeController extends Controller
 
     public function main(){
         return view('layouts.main',  ['users' => User::all()]);
+      
     }
 }

@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->date('FechNac')->default('2000-01-01');
             $table->string('desc')->default('Soy Chidori');
-            $table->string('gender')->default('Other');
+           // $table->string('gender')->default('Other');
             //$table->string('artist')->default('No specificated');
            // $table->date('FechNac');
             //$table->binary('ImgPortada');

@@ -11,18 +11,19 @@
         @include ('layouts.menu')
         <div id="leftContainer">
             <div id="formContent">
-                <form action="" enctype="multipart/form-data" method="POST">
+                <form action="/upload" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <label for="">Title</label>
-                        <input type="text" class="inputText" placeholder="Title here">
+                        <input type="text" name="Titulo" class="inputText" placeholder="Title here" required>
                       
                         <br>
                     <label for="">File</label>
-                        <input id="btnFile" type="file" accept="">  
+                        <input id="btnFile" name="multimedia" type="file" accept="" required>  
                     <label for="">Description</label>
-                        <textarea class="inputText" name="" id="" cols="30" rows="10"></textarea>
+                        <textarea class="inputText" name="desc" id="" cols="30" rows="10" required></textarea>
                         <br>
                     <label for="">Category</label>
-                        <select name="" id="selectCategory">
+                        <select name="category" id="selectCategory">
                             <option value="fanart">Fan Art</option>
                             <option value="orig">Original Art</option>
                             <option value="model">3D Modeling</option>
@@ -39,11 +40,22 @@
                        
                         <br>
                     <label for="">Tags*</label>
-                        <textarea class="inputText" name="" id="" cols="30" rows="10"></textarea>
+                        <!--<textarea class="inputText" name="" id="" cols="30" rows="10"></textarea>-->
+                         <label>Hashtag1</label>
+                        <input type="text" name="h1" required>
+
+                         <label>Hashtag2</label>
+                        <input type="text" name="h2" required>
+
+                         <label>Hashtag3</label>
+                        <input type="text" name="h3" required>
+
+                         <label>Hashtag4</label>
+                        <input type="text" name="h4" required>
                         <p>*Please, begin each tag with "#" and write each tag in a new line. Example:"#fanart, #shipping, #cartoon"</p>
                         <br>
                         <div id="contieneBtn"> 
-                            <input  id="btnDraft" type="submit" value="Save as Draft">
+                           <!-- <input  id="btnDraft" type="submit" value="Save as Draft">-->
                             <input id="btnUpload"type="submit" value="Upload">
                         </div>
                    
