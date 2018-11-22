@@ -23,7 +23,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return view('home', ['users' => User::all()]);
+        return view('main', ['users' => User::all()]);
     }
 
     public function main(){

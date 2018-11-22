@@ -42,16 +42,16 @@
                     <label for="">Tags*</label>
                         <!--<textarea class="inputText" name="" id="" cols="30" rows="10"></textarea>-->
                          <label>Hashtag1</label>
-                        <input type="text" name="h1" required>
+                        <input type="text" value="#" name="h1" required>
 
                          <label>Hashtag2</label>
-                        <input type="text" name="h2" required>
+                        <input type="text" value="#" name="h2" required>
 
                          <label>Hashtag3</label>
-                        <input type="text" name="h3" required>
+                        <input type="text" value="#" name="h3" required>
 
                          <label>Hashtag4</label>
-                        <input type="text" name="h4" required>
+                        <input type="text" value="#" name="h4" required>
                         <p>*Please, begin each tag with "#" and write each tag in a new line. Example:"#fanart, #shipping, #cartoon"</p>
                         <br>
                         <div id="contieneBtn"> 

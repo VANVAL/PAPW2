@@ -60,5 +60,6 @@ class ContentController extends Controller
         $contenido->save(); 
 
         return view('layouts.Profile', array('user'=> Auth::user()));
+        
     }
 }

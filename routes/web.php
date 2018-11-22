@@ -35,6 +35,8 @@ Route::get('/content', function () {
     return view('layouts.content');
 });
 
+Route::resource('contents','ContentControllerResource');
+
 
 /* Route::get('/profile2', function () {
     return view('layouts.Profile2');
