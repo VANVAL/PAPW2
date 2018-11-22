@@ -50,16 +50,16 @@ class User extends Authenticatable
 
 
 
-    public function subir(){
-        return $this->belongsToMany('Contenido', 'user_sube_contenido', 'UserSube_id', 'ContSubido_id');
+    public function contents(){
+        return $this->belongsToMany(Contenido::class);
     }
 
     public function likes(){
         return $this->belongsToMany('Contenido', 'user_likes_contenido', 'UserLike_id', 'ContLike_id');
     }
 
-    public function comentar(){
-        return $this->belongsToMany('Contenido', 'user_comenta_contenido', 'UserComenta_id', 'ContComenta_id');
+    public function comentacontenido(){
+        return $this->belongsToMany(Contenido::class);
     }
 
     public function comprar(){

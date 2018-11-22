@@ -59,6 +59,7 @@ Route::resource('userC','UserController2@update');
 Route::post('profile', 'UserController@update_avatar');
 
 
+
 Route::get('configurations', 'UserController@configure');
 Route::post('configurations', 'UserController@update_avatar');
 
@@ -85,3 +86,6 @@ Route::get('/home', function () {   return view(     'home',
 
 
 
+Route::get('/search', 'ContentController@search');
+Route::post('comment', 'ContentControllerResource@comentario');
+Route::get('content', 'ContentControllerResource@show_commentario');

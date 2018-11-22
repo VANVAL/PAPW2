@@ -142,7 +142,16 @@ font-weight: bold;
     left: 10px;
 }
 
-#busqueda img:hover {   
+#busqueda #img {   
+    height: auto;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    top: 11px;
+    left: 10px;
+}
+
+#busqueda #img:hover {   
     cursor: pointer;
 }
 

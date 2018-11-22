@@ -19,12 +19,17 @@
                 <a href=""><img id="logo" src="./img/money.png" alt="For Sale"></a>
             </div>
         </div>
+       
         <div class="menuElementB">
-            <div id="busqueda">
+            <div id="busqueda"> 
+                <form action="/search" method="get">
                 <input class="barraBusqueda" type="text" name="txt_busca" placeholder="Search">
-                <img src="./img/search.png" alt="Busc">
+                <input type="image" id="img" src="./img/search.png" alt="Search">
+                <!--<img src="./img/search.png" alt="Busc">-->
+            </form>
             </div>
-        </div>
+         </div>
+   
         <div id="otherContainer"> 
             <div class="menuItem">
                 <div id="user">

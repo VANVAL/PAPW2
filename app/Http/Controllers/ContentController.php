@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\View;
 use DB;
+use App\User;
 
-use Auth;
+
+
 
 class ContentController extends Controller
 {
@@ -32,12 +35,27 @@ class ContentController extends Controller
 		return view('layouts.main',['contents'=>$contents]);*/
 	}
 
+    public function search(Request $request){
+
+        $search=$request->get('txt_busca');
+        $contents=DB::table('contenidos')->where('hashtag1','like', '%'.$search.'%')->paginate(10);
+        return view('layouts.main', ['contents' => $contents]);
+    }
+
+    
+
 	public function ver_usuario(){
   		return view('layouts.upload', array('user'=> Auth::user()));
 	}
 
+
+
     public function save_contenido(Request $request)
     {
+
+        $user=Auth::user();
+        $nombre="";
+        
         if($request->hasfile('multimedia')){
             $file=$request->file('multimedia');
             //$nombre=$file->getClientOriginalName();
@@ -58,8 +76,9 @@ class ContentController extends Controller
         $contenido->hashtag4=$request->get("h4");
 
         $contenido->save(); 
+        $contenido->users()->attach($user->id);
 
         return view('layouts.Profile', array('user'=> Auth::user()));
-        
+
     }
 }

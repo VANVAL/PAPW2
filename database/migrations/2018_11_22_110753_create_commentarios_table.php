@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserSubeContenidoTable extends Migration
+class CreateCommentariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateUserSubeContenidoTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_sube_contenido', function (Blueprint $table) {
+        Schema::create('commentarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('UserSube_id')->unsigned();
-            $table->integer('ContSubido_id')->unsigned();
+            $table->integer('idContenido');
+            $table->string('comentario');
+            $table->string('NomUser');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateUserSubeContenidoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_sube_contenido');
+        Schema::dropIfExists('commentarios');
     }
 }

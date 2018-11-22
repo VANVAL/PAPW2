@@ -19,7 +19,7 @@
            
             <div id="rightSide">
                 <div id="titleHere">
-                    <h2>{{$contents->Title}}</h2>
+                    <h2>{{$contents->Titulo}}</h2>
                 </div>
                 <div class="datosUsuario">
                     <img class="avatarUsuario" src="../img/cerebrito.png" alt="USER" />
@@ -44,17 +44,20 @@
 
                  <div class="commentList">
                     <ul>
+                        @isset($user)
+                        @foreach($user as $users)
                         <li>
                             <div class="commentContainer">
                                 <img class="avatarUsuario2" src="../img/logocerebro.png" alt="avatarUsuario" />
 
-                            <p class="nombreUsuario2">Fulano</p>
+                            <p class="nombreUsuario2">{{$users->name}}</p>
                             <p class="fecha2">Fecha y hora</p>
                             <p class="textoComentario2">Bien!</p>
                             </div>
                         </li>
-
-                        <li>
+                        @endforeach
+                        @endisset
+                       <!-- <li>
                             <div class="commentContainer">
                                 <img class="avatarUsuario2" src="../img/logocerebro.png" alt="avatarUsuario" />
 
@@ -62,7 +65,7 @@
                             <p class="fecha2">Fecha y hora</p>
                             <p class="textoComentario2">Chafaaaaaa! :P</p>
                             </div>
-                        </li>
+                        </li>-->
 
                     </ul>
 
@@ -70,10 +73,13 @@
 
                 <div class="makeComment">
                         <img class="avatarUsuario3" src="../img/avatarPlaceholder2.png" alt="USER"/>
-                    <form class="commentForm" action="" method="post">
+                    <form class="commentForm" action="/comment" method="post">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input class="textbox" type="text" name="commentTextbox" value="">
+                        <input type="hidden" name="ContID" value="{{$contents->id}}">
+
                         <br>
-                        <input id="MakeAComment" type="button" name="" value="comment">
+                        <input id="MakeAComment" type="submit" name="" value="comment">
                     </form>
 
                 </div>
