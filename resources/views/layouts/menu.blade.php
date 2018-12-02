@@ -11,7 +11,7 @@
     <div id="container">
         <div class="menuElement">
             <div id="LogoContainer">
-                <a href=""><img id="logo" src="./img/logoAlt.png" alt="Logo"> <h4>CREATOR</h4></a>
+                <a href="/main"><img id="logo" src="./img/logoAlt.png" alt="Logo"> <h4>CREATOR</h4></a>
             </div>
         </div>
         <div class="menuElement">

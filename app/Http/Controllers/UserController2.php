@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+
 use Image;
-use App\User;       
+use Illuminate\Support\Facades\Auth;
+use App\commentario;
+use App\Contenido;
+use App\User;
+use DB;     
 
 class UserController2 extends Controller
 {
@@ -50,7 +54,20 @@ class UserController2 extends Controller
      */
     public function show($id)
     {
-        //
+        //MOSTRAR PERFILES DE OTROS USUARIOS
+
+         $user=Auth::user();
+            $usuario = DB::table('contenidos')
+        ->join('contenido_user','contenido_user.contenido_id','=','contenidos.id')
+        ->join('users','users.id', '=', 'contenido_user.user_id')
+
+        ->select('users.id as yes','users.avatar as avatar','users.cover as cover','users.name as usuarioquesubio','users.email as email','users.desc as descripcion','users.FechNac as Fecha','contenidos.id as IDContent','contenidos.multimedia as fotito','contenidos.Titulo as titulodecontenido', 'contenidos.Descripcion as desc','contenidos.hashtag1 as gatito', 'contenidos.updated_at as fechasubida')
+         ->where('users.id', '=', $id)
+        ->get();
+        
+        return view('layouts.ProfileOtroUsuario',compact('usuario', $usuario))->with('user', $user);
+       // dd($usuario);
+
     }
 
     /**

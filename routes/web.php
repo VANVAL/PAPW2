@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@main')->name('main');
@@ -36,7 +37,7 @@ Route::get('/content', function () {
 });
 
 Route::resource('contents','ContentControllerResource');
-
+Route::resource('contents/profiles','UserController2');
 
 /* Route::get('/profile2', function () {
     return view('layouts.Profile2');
@@ -54,7 +55,7 @@ Route::get('main', 'UserController@main');
 
 Route::post('profile', 'UserController@update_avatar');
 
-Route::resource('userC','UserController2@update');
+//Route::resource('userC','UserController2@update');
 
 Route::post('profile', 'UserController@update_avatar');
 

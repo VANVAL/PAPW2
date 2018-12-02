@@ -11,8 +11,18 @@
         </script>
     </head>
     <body>
+        <?php
+        $header = null;
+        ?>
         <div class="contentViewer">
             <div class="content">
+                @foreach($contents2 as $u)
+                @if($header!=$u->fotito)
+                {{$u->fotito}}
+                <?php $header=$u->fotito ?>
+                @endif
+                <label>{{$u->commentaritos}}</label> <br>
+                @endforeach
                 <img class="Image" src="./img/fredo.png" alt="PHOTO/VIDEO" />
             </div>
 

@@ -48,7 +48,7 @@
                 @endisset
                 </div>
                 <div class="datosUsuario">
-                      @isset($contents)
+                     @isset($contents)
                          @foreach($contents as $u)
                         @if($Iduser1vez!=$u->yes)
                      <a href="profiles/{{$u->yes}}">
@@ -57,17 +57,17 @@
                          @endforeach
                          @endisset
 
+
+
                      @isset($contents)
                          @foreach($contents as $u)
                         @if($Avatar1vez!=$u->avatar)
-
-                   <img class="avatarUsuario" src="/uploads/avatars/{{$u->avatar}}" alt="USER" />
+                    <img class="avatarUsuario" src="/uploads/avatars/{{$u->avatar}}" alt="USER" />
                      <?php $Avatar1vez=$u->avatar ?>
                          @endif
                          @endforeach
                          @endisset
-                    </a>
-
+                     </a>
                     <p class="nombreUsuario">
                          @isset($contents)
                          @foreach($contents as $u)
@@ -114,36 +114,11 @@
                 </div>
 
 <!-- Seccion comentarios----------------------------->
-                 <div class="commentList">
-                    <ul>
-                     
-                        <li>  @isset($contents)
-                                  @foreach($contents as $u)
-                            <div class="commentContainer">
-                               
-                                   
-                                <img class="avatarUsuario2" src="/uploads/avatars/{{$u->fotitodelquecomenta}}" alt="avatarUsuario" />
-                                 
-                            <p class="nombreUsuario2">{{$u->usuarioquecomenta}}</p>
-                            <p class="fecha2">{{$u->fechacomentario}}</p>
-                            <p class="textoComentario2">{{$u->commentaritos}}</p>
-                            
-                            </div>
-                            @endforeach
-                             @endisset
-                        </li>
-                      
-                   
-
-                    </ul>
-
-                </div>  
+              
 <!------------------------------------------------------------------------------------->
                 <div class="makeComment">
                     @isset($user)
-             
                         <img class="avatarUsuario3" src="/uploads/avatars/{{$user->avatar}}" alt="USER"/>
-
                         @endisset
                     <form class="commentForm" action="/comment" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
