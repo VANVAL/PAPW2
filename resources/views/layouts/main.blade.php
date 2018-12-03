@@ -17,8 +17,8 @@
              @foreach($contents as $objects)
             <div class="bodyElement">
 
-                <!--<img src="./img/v_hart.png" alt="artwork">-->
-                <a href="contents/{{$objects->id}}"><img src="/uploads/contents/{{$objects->multimedia}}" alt="artwork"></a>
+                <!--<img   class="contenidoImg" src="./img/v_hart.png" alt="artwork">-->
+                <a href="contents/{{$objects->id}}"><img  class="contenidoImg" src="/uploads/contents/{{$objects->multimedia}}" alt="artwork"></a>
                 
                 
             </div> <!--Cierra un elemento -->

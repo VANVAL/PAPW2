@@ -20,7 +20,7 @@
             <div class="bodyElement">
 
                 <img class="followerImg" src="./img/avatarPlaceholder2.png" alt="artwork">
-                <h2>Nombre Usuario</h2>
+                <h2 class="followerName">Nombre Usuario</h2>
             </div> <!--Cierra un elemento -->
             <div class="bodyElement">
 
@@ -30,12 +30,12 @@
             <div class="bodyElement">
 
                 <img  class="followerImg" src="./img/avatarPlaceholder2.png" alt="artwork">
-                <h2>Nombre Usuario</h2>
+                <h2 class="followerName">Nombre Usuario</h2>
             </div> <!--Cierra un elemento -->
             <div class="bodyElement">
 
                 <img class="followerImg" src="./img/avatarPlaceholder2.png" alt="artwork">
-                <h2>Nombre Usuario</h2>
+                <h2 class="followerName">Nombre Usuario</h2>
             </div> <!--Cierra un elemento -->
 
             <?php /*
