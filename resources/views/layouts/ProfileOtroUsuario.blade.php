@@ -21,9 +21,13 @@
 
         $Iduser1vez=null;
         $Avatar1vez=null;
+        $Cover1vez=null;
         $Nombre1vez=null;
+        $Email1vez=null;
+        $Descripcion1vez=null;
+        $FechNac1vez=null;
 
-        
+
         ?>
 
     <div id="container">
@@ -87,15 +91,27 @@
             <div class="coverLayout">
                         <div class="coverImage">
                                 <!--<img id="robin" src="img/SeHablaGamer.png" alt="COVER" />-->
+                                 @isset($usuario)
+                                 @foreach($usuario as $u)
+                                 @if($Cover1vez!=$u->cover)
+                                <img id="robin" src="/uploads/covers/{{$u->cover}}" alt="COVER" />
+                                <?php $Cover1vez=$u->cover ?>
+                                 @endif
+                                 @endforeach
+                                 @endisset
 
-                                <img id="robin" src="/uploads/covers/{{$user->cover}}" alt="COVER" />
                         </div>
 
                         <div class="Avatar">
                                 <!--<img src="img/avatarPlaceholder2.png" alt="AVATAR" />-->
-                                @isset($user)
-                                <img src="/uploads/avatars/{{$user->avatar}}" alt="AVATAR" />
-                                @endisset
+                                  @isset($usuario)
+                                 @foreach($usuario as $u)
+                                 @if($Avatar1vez!=$u->avatar)
+                                <img src="/uploads/avatars/{{$u->avatar}}" alt="AVATAR" />
+                                <?php $Avatar1vez=$u->avatar ?>
+                                 @endif
+                                 @endforeach
+                                 @endisset
                         </div>
             </div>
 
@@ -105,47 +121,77 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="submit" name="">
                 </form>-->
-                @isset($user) 
+               
                     <div id="datosContacto">
                         <div class="seccion">
                             <h3>
-                                {{$user->name}}
+                                  @isset($usuario)
+                                 @foreach($usuario as $u)
+                                 @if($Nombre1vez!=$u->usuarioquesubio)
+                                {{$u->usuarioquesubio}}
+                                 <?php $Nombre1vez=$u->usuarioquesubio ?>
+                                 @endif
+                                 @endforeach
+                                 @endisset
+
                             </h3>
                         </div>
                         <div class="seccion">
                             <p id="descUsuario">
-                                {{$user->desc}}    
+                                @isset($usuario)
+                                 @foreach($usuario as $u)
+                                 @if($Descripcion1vez!=$u->descripcion)
+                                {{$u->descripcion}} 
+                                 <?php $Descripcion1vez=$u->descripcion ?>
+                                 @endif
+                                 @endforeach
+                                 @endisset   
                             </p>
                         </div>
                     
 
                         <div class="seccion">
-                            <p>{{$user->email}}</p>  
+                            @isset($usuario)
+                                 @foreach($usuario as $u)
+                                 @if($Email1vez!=$u->email)
+                            <p>{{$u->email}}</p> 
+                            <?php $Email1vez=$u->email ?>
+                                 @endif
+                                 @endforeach
+                                 @endisset   
                         </div>
 
                         
                         <div class="seccion">   
-                            <p>{{$user->FechNac}}</p>          
+                            @isset($usuario)
+                                 @foreach($usuario as $u)
+                                 @if($FechNac1vez!=$u->Fecha)
+                            <p>{{$u->Fecha}}</p>  
+                            <?php $FechNac1vez=$u->Fecha ?>
+                             @endif
+                                 @endforeach
+                                 @endisset          
                         </div>
-                @endisset
+             
                     <div class="seccion">    
                         <div id="icons">
                             <div class="media-icon">
-                                <img src="./img/facebook.png" alt="facebook">
+                                <img src="/./img/facebook.png" alt="facebook">
                             </div>
                             <div class="media-icon">
-                                <img src="./img/bird.png" alt="twitter">
+                                <img src="/./img/bird.png" alt="twitter">
                             </div>
                             <div class="media-icon">
-                                <img src="./img/youtube.png" alt="youtube">
+                                <img src="/./img/youtube.png" alt="youtube">
                             </div>
                         </div>
                     </div>
 
                 <div class="seccion">
+                    <form>
                     <div id="followUser"> 
                         <img src="/./img/heart.png" alt="Follow">    
-                    </div>        
+                    </div></form>        
                     </div>
                 </div> 
                 <div class="seccion">
@@ -157,9 +203,15 @@
             </div><!--CIERRA InfoUsuario-->
 
             <div id="allContent">
+
+
+                @isset($usuario)
+                @foreach($usuario as $u)
                 <div class="contenido">
-                        <a href="content">
-                            <img class="fotoPost" src="/./img/fredo.png" alt="Photo" />
+
+                        <a href="/contents/{{$u->IDContent}}">
+
+                            <img class="fotoPost" src="/uploads/contents/{{$u->fotito}}" alt="Photo" />
                         </a>
                     
                         <div class="botones">  
@@ -172,68 +224,20 @@
                         
                         <div> 
                             <p class="textoOpc">
-                                Descripcion super chida de la foto :D
-                                UEHUSHDIJNSIOASVAOIDJSAODJAOSIDJAOISDJOAISJOAIJOVIFVUFI
-                                BSUIOAISODJAOSVHFUHOVABOAUSCASODDJOASIHVUODANSAOS
-                                JSDSKJDNAKSIAJCIDOANCIODKLANCADIOALKMSKCLNDOPOGPOGE
+                                {{$u->desc}}
                             </p> 
                         </div>
                     
                         <div id="hashtagContainer"> 
-                            <label class="hashtag">#PrimeraObra #Hola #NoALaVenta #Chris</label>
+                            <label class="hashtag">{{$u->gatito}}</label>
                         </div>
                         
                 </div>
+                @endforeach
+                @endisset
 
                     
-                <div class="contenido">
-                        <a href="content">
-                            <img class="fotoPost" src="/./img/fredo.png" alt="Photo" />
-                        </a>
-                    
-                        <div class="botones">  
-                                <img class="iHeart" src="/./img/btn_heart1.png" alt="LOVE" />
-                            
-                                <a href=""><img class="wrong" src="/./img/wrong1.png" alt="REPORT" /></a>
-                                <img class="icomment" src="/./img/comment.png" alt="comment" />
-                                
-                        </div> 
-                        
-                        <div> 
-                            <p class="textoOpc">
-                                TRIPALOSKY! TRIPA-TRIPALOSKY! 
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY! 
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY! 
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY! 
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY! 
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                                TRIPALOSKY! TRIPA-TRIPALOSKY!
-                            </p> 
-                        </div>
-                    
-                        <div class="hashtagContainer"> 
-                            <label class="hashtag">#Quiero #Pasar #El #Semestre #Plz</label>
-                        </div>
-                        
-                </div>
+                
             </div><!-- Cierra allcontent--> 
         </div>
             
