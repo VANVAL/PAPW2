@@ -64,7 +64,7 @@ div .avatarUsuario3{
     border-radius: 100px;
     position: relative;
     display: block;
-    top: 35px;
+    top: 8px;
     left: 0px;
 }
 
@@ -227,7 +227,7 @@ hr{
 }
 
 .makeComment .commentForm{
-    top: 0px;
+    top: -30px;
     left: 50px;
     display: inline-block;
     position: relative;
