@@ -14,6 +14,7 @@
         <div id="mainContainer">
             <div class="coverLayout">
                         <div class="coverImage">
+                            <!--  -->
                                 <!--<img id="robin" src="img/SeHablaGamer.png" alt="COVER" />-->
                                 <img id="robin" src="/uploads/covers/{{$user->cover}}" alt="COVER" />
                         </div>
