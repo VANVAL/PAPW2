@@ -89,4 +89,4 @@ Route::get('/home', function () {   return view(     'home',
 
 Route::get('/search', 'ContentController@search');
 Route::post('comment', 'ContentControllerResource@comentario');
-Route::get('content', 'ContentControllerResource@show_commentario');
+//Route::get('content', 'ContentControllerResource@show_commentario');
