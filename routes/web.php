@@ -35,6 +35,9 @@ Route::get('/upload', function () {
 Route::get('/content', function () {
     return view('layouts.content');
 });
+Route::get('/followers', function () {
+    return view('layouts.followers');
+}); 
 
 Route::resource('contents','ContentControllerResource');
 Route::resource('contents/profiles','UserController2');
@@ -89,4 +92,4 @@ Route::get('/home', function () {   return view(     'home',
 
 Route::get('/search', 'ContentController@search');
 Route::post('comment', 'ContentControllerResource@comentario');
-//Route::get('content', 'ContentControllerResource@show_commentario');
+
